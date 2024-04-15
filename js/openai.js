@@ -32,11 +32,11 @@
 //   })
 
 export class OpenAI {
-  static GPT3Dot5Turbo = 'gpt-3.5-turbo'
+  static GPT3Dot5Turbo = 'gpt-4-turbo'
 
   baseURL = 'https://api.openai.com/v1'
-  apiKey
-  organizationID = ''
+  apiKey = process.env.OPENAI_API_KEY
+  organizationID = 'NEO DE'
 
   constructor (apiKey, organizationID) {
     // TODO: Make a better check than just something being present
